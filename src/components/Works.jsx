@@ -3,7 +3,7 @@ import Project from "./Project";
 
 export default function Works() {
 	return (
-		<section className="works">
+		<section id="works">
 			<div className="container">
 				<div className="row">
 					<div className="col-md-8 mx-auto text-center">
