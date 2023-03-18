@@ -44,8 +44,15 @@ export default function Skills() {
 						level={3}
 						icon={"bx bxl-python"}
 						comment={
-							"直近ではTensorFlowを使った自然言語処理のモデルの学習を行いました？"
+							"直近ではTensorFlowを使った自然言語処理のモデルの学習を行いました。"
 						}
+					/>
+					<Card
+						skill={"C#"}
+						experience={"半"}
+						level={2}
+						icon={"bx bxl-c#"}
+						comment={"3dゲームの開発チュートリアルをしました"}
 					/>
 					<Card
 						skill={"Node.js"}
