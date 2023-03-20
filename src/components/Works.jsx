@@ -1,5 +1,6 @@
 import React from "react";
 import Project from "./Project";
+import data from "../data";
 
 export default function Works() {
 	return (
@@ -12,24 +13,14 @@ export default function Works() {
 					</div>
 				</div>
 				<div className="row g-3">
-					<Project
-						url={""}
-						title={"Portfolio"}
-						comment={"このポートフォリオです。"}
-						index={1}
-					/>
-					<Project
-						url={"https://space-invaders-with-reflect.herokuapp.com/index.html"}
-						title={"Space Invaders"}
-						comment={"JavaScriptでライブラリなどは使わず製作しました。"}
-						index={2}
-					/>
-					<Project
-						url={"https://nodejs-mongodb-tutorial.herokuapp.com/"}
-						title={"ToDoApp"}
-						comment={"Nodejs,MongoDBを使ったToDoApp"}
-						index={3}
-					/>
+					{data.works.map((work) => (
+						<Project
+							url={work.url}
+							title={work.title}
+							comment={work.comment}
+							index={work.index}
+						/>
+					))}
 				</div>
 			</div>
 		</section>

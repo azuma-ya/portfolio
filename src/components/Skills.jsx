@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "./Card";
+import data from "../data";
 
 export default function Skills() {
 	return (
@@ -13,67 +14,15 @@ export default function Skills() {
 					</div>
 				</div>
 				<div className="row g-4">
-					<Card
-						skill={"HTML5"}
-						experience={1}
-						level={3}
-						icon={"bx bxl-html5"}
-						comment={
-							"以前ゲーム制作をしていた時に少しUIを作る程度だったので深くはできませんが、基本的なことはできます。"
-						}
-					/>
-					<Card
-						skill={"CSS3"}
-						experience={1}
-						level={3}
-						icon={"bx bxl-css3"}
-						comment={
-							"Html5同様、基本的なことはできます。最近ではCSSフレームワークのTailwindcss,Bootstrap5の勉強をしています。"
-						}
-					/>
-					<Card
-						skill={"JavaScript"}
-						experience={2}
-						level={4}
-						icon={"bx bxl-javascript"}
-						comment={""}
-					/>
-					<Card
-						skill={"Python"}
-						experience={1}
-						level={3}
-						icon={"bx bxl-python"}
-						comment={
-							"直近ではTensorFlowを使った自然言語処理のモデルの学習を行いました。"
-						}
-					/>
-					<Card
-						skill={"C#"}
-						experience={"半"}
-						level={2}
-						icon={"bx bxl-c#"}
-						comment={"3dゲームの開発チュートリアルをしました"}
-					/>
-					<Card
-						skill={"Node.js"}
-						experience={1}
-						level={3}
-						icon={"bx bxl-nodejs"}
-						comment={"mongoDBを使ってToDoAppを製作しました。"}
-					/>
-					<Card
-						skill={"React"}
-						experience={1}
-						level={3}
-						icon={"bx bxl-react"}
-						comment={"firebaseを使ったマイクロブログを製作しました。"}
-					/>
-					<Card
-						skill={"Django"}
-						experience={1}
-						level={2}
-						icon={"bx bxl-python"}
-					/>
+					{data.skills.map((skill) => (
+						<Card
+							skill={skill.name}
+							experience={skill.experience}
+							level={skill.level}
+							icon={skill.icon}
+							comment={skill.comment}
+						/>
+					))}
 				</div>
 				<div className="row mt-4 g-3">
 					<div className="col-lg-4">
