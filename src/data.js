@@ -36,7 +36,7 @@ const data = {
 			experience: "半",
 			level: 2,
 			icon: "bx bxl-c#",
-			comment: "Unitydeで3dゲームの開発チュートリアルをしました。",
+			comment: "Unityで3dゲームの開発チュートリアルをしました。",
 		},
 		{
 			name: "Node.js",
